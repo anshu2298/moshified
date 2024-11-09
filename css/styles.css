@@ -183,13 +183,14 @@
   }
   
   .icon-container {
+    align-items: center;
     background: #f3f9fa;
-    width: 64px;
-    height: 64px;
     border-radius: 100%;
     display: inline-flex;
+    height: 64px;
     justify-content: center;
-    align-items: center;
+    outline: 0;
+    width: 64px;
   }
   
   .icon-container--accent {
@@ -208,6 +209,14 @@
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
+  }
+
+
+  .btn .icon{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
   }
   
   .btn--primary {
@@ -287,7 +296,7 @@
   .input-group .input {
     border: 0;
     flex-grow: 1;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2 rem;
   }
   
   .input-group .btn {
@@ -705,3 +714,28 @@
     }
   }
 
+  /* Domain Block */
+
+  .block__domain .input-group{
+   box-shadow: 0 0 30px 20px #e6ebee; 
+   border: 0;
+   margin: 4rem auto;
+   max-width: 670px;
+  }
+
+  .block-domain__prices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px){
+    .block-domain__prices{
+      grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    }
+  }
